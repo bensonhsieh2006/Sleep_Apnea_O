@@ -1,0 +1,7 @@
+The study recorded 500 minutes of audio data from each subject per night. We collected data for a total of 195 minutes, specifically from the 150th to the 345th minute. The data was divided into 30-second intervals, resulting in 390 audio segments for each subject.
+We transformed the audio segments from the previous step into Mel Spectrograms, as depicted in below image. Mel spectrograms replicate the non-linear perception of sound by the human ear. The frequency-related coefficients are calculated using the Short Time Fourier Transform (STFT) to extract frequency-related coefficients. Each frame in the frequency domain is processed through a Mel Filter Bank to extract the necessary information. The conversion between Hertz (f) and Mel (m) is defined as follows:  m=2595*(1+700f)
+
+![image](https://github.com/bensonhsieh2006/Sleep_Apnea/assets/52516956/edb2db46-6f56-4ceb-9730-269262053fc5)
+
+Based on the sleep apnea event table obtained from PSG examination of each subject, binary classification was conducted. The percentage of time in each 30-second time step occupied by sleep apnea events was calculated. In this experiment, a threshold value was used for annotation. Values above the threshold were labeled as 1, while those below it were labeled as 0. Six threshold values (0.05, 0.10, 0.15, 0.20, 0.25, 0.30) were tested. Among the 1560 audio segments analyzed in this study, 842 were labeled as 0 and 718 were labeled as 1, resulting in a ratio of approximately 6:5.
+
